@@ -1,0 +1,47 @@
+GET     /                      com.cvcloud.controllers.LoginController.index
+GET     /test                      com.cvcloud.controllers.LoginController.getTest
+
+POST    /authenticate          com.cvcloud.controllers.LoginController.login
+POST    /createUser            com.cvcloud.controllers.LoginController.createUser
+PUT    /changePassword            com.cvcloud.controllers.LoginController.changePassword
+POST    /sendMail            com.cvcloud.controllers.MailController.resetPassword
+GET     /details/:id               com.cvcloud.controllers.LoginController.findUser(id:String)
+GET     /mailByKey/:id             com.cvcloud.controllers.LoginController.getMailByKey(id:String)
+DELETE  /deleteUser/:id            com.cvcloud.controllers.LoginController.deleteUser(id:String)
+POST     /getUsersByIds        com.cvcloud.controllers.LoginController.getUsersByIds
+
+POST    /createCandidate       com.cvcloud.controllers.ProfileController.createCandidate
+POST    /createCandidateEmployment/:id     com.cvcloud.controllers.ProfileController.createCandidateEmployment(id:String)
+PUT    /editCandidateEmployment/:id        com.cvcloud.controllers.ProfileController.editCandidateEmployment(id:String)
+PUT    /editCandidatePreviousEmployment/:id        com.cvcloud.controllers.ProfileController.editCandidatePreviousEmployment(id:String)
+PUT    /editCandidateSkill/:id             com.cvcloud.controllers.ProfileController.editCandidateSkills(id:String)
+PUT    /editCandidateEducation/:id             com.cvcloud.controllers.ProfileController.editCandidateEducation(id:String)
+POST    /editCandidateJobDetails           com.cvcloud.controllers.ProfileController.editCandidateJobSearchEmployment
+
+GET     /profile/:id               com.cvcloud.controllers.ProfileController.showProfile(id:String)
+GET     /userByCandidate/:id               com.cvcloud.controllers.ProfileController.getUserByCandidateId(id:String)
+
+POST     /sendMessage              com.cvcloud.controllers.MessageController.sendMessage
+GET      /showAllMessages/:id      com.cvcloud.controllers.MessageController.showAllMessages(id:String)
+GET      /showAllClientMessages/:id      com.cvcloud.controllers.MessageController.showAllClientMessages(id:String)
+POST     /upload/:id               com.cvcloud.controllers.ProfileController.upload(id:String)
+POST     /uploadPhoto/:id               com.cvcloud.controllers.ProfileController.uploadPhoto(id:String)
+POST     /uploadMultiple/:id       com.cvcloud.controllers.ProfileController.uploadMultiple(id:String)
+POST     /getCandidatesByIds      com.cvcloud.controllers.ProfileController.getCandidatesByIds
+POST     /getUsersByCandidateIds      com.cvcloud.controllers.ProfileController.getUsersByCandidateIds
+
+GET      /getFile/:id              com.cvcloud.controllers.ProfileController.getFileFromDb(id:String)
+POST     /download                 com.cvcloud.controllers.ProfileController.download
+GET      /logout/:id              com.cvcloud.controllers.LoginController.logout(id:String)
+
+GET      /degree                  com.cvcloud.controllers.DegreeController.getAllDegree
+GET      /degree/:id              com.cvcloud.controllers.DegreeController.getDegreeById(id:String)
+
+POST    /sendQuery                com.cvcloud.controllers.ContactController.createContact
+GET      /contact                 com.cvcloud.controllers.ContactController.getAllContact
+POST     /candidatePersonal            com.cvcloud.controllers.ProfileController.editCandidatePersonal
+
+POST     /createNewsFeed            com.cvcloud.controllers.NewsFeedController.createNewsFeed
+GET     /newsFeed/:id            com.cvcloud.controllers.NewsFeedController.getAllNews(id:String)
+
+GET    /assets/*file           controllers.Assets.at(path="/public", file)

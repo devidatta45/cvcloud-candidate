@@ -1,0 +1,55 @@
+<div class="sticky">
+    <div class="s3_bg">
+
+
+        <div class="list-row">
+            <div class="list-left"><img src="../assets/images/home.png"> <br><br>HOME</div>
+
+            <div class="list-left"></div>
+            <div class="list-left"><img src="../assets/images/profile.png">
+            <br><br> PROFILE
+
+            </div>
+            <div class="list-left"></div>
+            <div class="list-left"><img src="../assets/images/documents.png"><br><br>DOCUMENTS
+            </div>
+            <div class="list-left"></div>
+            <div class="list-left"><img src="../assets/images/skills.png"><br><br>SKILLS
+            </div>
+            <div class="list-left"></div>
+            <div class="list-left"><img src="../assets/images/network.png"><br><br>NETWORK
+            </div>
+            <div class="list-left"></div>
+            <div class="list-left"><img src="../assets/images/inbox.png"><br><br>INBOX
+            </div>
+            <div class="list-left"></div>
+            <div class="list-left"><img src="../assets/images/activity.png"><br><br>ACTIVITY CENTRE
+            </div>
+            <div class="list-left"></div>
+            <div class="list-left"><img src="../assets/images/contact.png"><br><br>CONTACT
+            </div>
+            <div class="list-left"></div>
+
+            <div class="list-left"><img src="../assets/images/contact.png"><br><br>
+                <a style="text-decoration:none;">LOGOUT</a>
+            </div>
+            <div class="list-left"></div>
+        </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+var stickyOffset = $('.sticky').offset().top;
+
+$(window).scroll(function(){
+  var sticky = $('.sticky'),
+      scroll = $(window).scrollTop();
+
+  if (scroll >= stickyOffset) sticky.addClass('fixed');
+  else sticky.removeClass('fixed');
+});
+</script>
